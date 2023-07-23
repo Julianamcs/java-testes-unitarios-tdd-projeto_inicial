@@ -25,6 +25,16 @@ public class ReajusteServiceTest {
         System.out.println(funcionario.getSalario());
     }
 
+    @BeforeAll
+    public static void antesDeTodos(){
+        System.out.println("Inicializando o teste");
+    }
+
+    @AfterAll
+    public static void depoisDeTodos(){
+        System.out.println("Finalizando o teste");
+    }
+
     @Test
     void reajusteDeveriaSerdeTresPorcentoquandoDesempenhoForADesejar(){
         service.concederReajuste(funcionario, Desempenho.A_DESEJAR);
